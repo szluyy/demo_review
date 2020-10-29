@@ -12,22 +12,6 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        val c=String::class
-        println(c)
-
-        val c1= String::class.java
-        println(c1)
-        val str="asdasd"
-        val c3=String::javaClass
-        println(c3)
-
-
-        println("s1===${str.javaClass}")
-        println("s1===${str::class}")
-        println("s1===${str::class.java}")
-
-        var i=128
-        var j=128
-        assertEquals(true,i==j)
+        var sg= Singleton2.get()
     }
 }

@@ -7,12 +7,17 @@ import android.view.WindowManager
 import android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN
 import android.view.WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import com.example.demo_review.permission.PermissionCallback
 
 abstract class BaseActivity :AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getLayoutId())
         initView()
+    }
+
+    fun requestPermission(permissions: Array<String>,callback:PermissionCallback){
     }
 
     /**
@@ -25,10 +30,6 @@ abstract class BaseActivity :AppCompatActivity() {
      */
     open fun initView(){
 
-//
-//        decorView.systemUiVisibility=View.SYSTEM_UI_FLAG_FULLSCREEN
-//        全屏
-//        window.addFlags(FLAG_FULLSCREEN)
         supportActionBar?.hide()
     }
 
